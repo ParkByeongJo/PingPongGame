@@ -1,3 +1,5 @@
+import java.awt.*;
+import javax.swing.*;
 
 public class Racket {
 	private static final int WIDTH=10;
@@ -6,5 +8,14 @@ public class Racket {
 	int y=0;
 	int x_speed=0;
 	int y_speed=0;
+	private GameBoard game;
+	Color color;
+	
+	public Racket(GameBoard game, int x, int y, Color color) {
+		this.game=game;
+		this.x=x;
+		this.y=y;
+		this.color=color;
+	}
 
 }
