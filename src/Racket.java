@@ -18,4 +18,13 @@ public class Racket {
 		this.color=color;
 	}
 
+	public void move() {
+		if(y+y_speed > 0 && y+y_speed < game.getHeight() - HEIGHT)
+			y+=y_speed;
+	}
+	
+	public void draw(Graphics2D g) {
+		g.setColor(color);
+		g.fillRect(x, y, WIDTH, HEIGHT);
+	}
 }
