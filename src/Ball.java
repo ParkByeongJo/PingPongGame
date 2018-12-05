@@ -27,5 +27,10 @@ public class Ball {
 		x=x+x_speed;
 		y=y+y_speed;
 	}
+	
+	public void draw(Graphics2D g) {
+		g.setColor(color);
+		g.fillOval(x, y, 2 * RADIUS, 2 * RADIUS);
+	}
 
 }
