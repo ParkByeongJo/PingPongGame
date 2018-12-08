@@ -1,8 +1,9 @@
 import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.*;
-
 
 public class GameBoard extends JPanel implements KeyListener {//탁구대 클래스(화면 창이므로 JPanel클래스를 상속받고 KeyListener인터페이스를 구현함)
 	
@@ -19,6 +20,21 @@ public class GameBoard extends JPanel implements KeyListener {//탁구대 클래스(화
 		this.addKeyListener(this);
 	}
 
+	private void move() {//공과 라켓을 이동시켜주는 메소드
+		ball.move();
+		racket1.move();
+		racket2.move();
+	}
+	
+	@Override
+	public void paint(Graphics g) {
+		super.paint(g);
+		Graphics2D gd2=(Graphics2D)g;
+		ball.draw(gd2);
+		racket1.draw(gd2);
+		racket2.draw(gd2);
+	}
+	
 	@Override
 	public void keyPressed(KeyEvent arg0) {
 		// TODO Auto-generated method stub

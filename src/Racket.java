@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.awt.event.KeyEvent;
+
 import javax.swing.*;
 
 public class Racket {
@@ -26,5 +28,22 @@ public class Racket {
 	public void draw(Graphics2D g) {//라켓을 그려주는 메소드
 		g.setColor(color);
 		g.fillRect(x, y, WIDTH, HEIGHT);
+	}
+	
+	public void keyReleased(KeyEvent e) {//키를 떼었을 때
+		y_speed=0;
+	}
+	
+	public void keyPressed(KeyEvent e) {//키 이벤트를 처리해주는 메소드
+		if(e.getKeyChar() == KeyEvent.VK_UP) {
+			y_speed=-3;
+		}
+		if(e.getKeyCode() == KeyEvent.VK_DOWN) {
+			y_speed=-3;
+		}
+	}
+	
+	public Rectangle getBounds() {
+		return new Rectangle(x, y, WIDTH, HEIGHT);
 	}
 }
