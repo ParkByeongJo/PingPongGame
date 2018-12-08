@@ -43,7 +43,8 @@ public class GameBoard extends JPanel implements KeyListener {//탁구대 클래스(화
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
+		racket1.keyReleased(e);
+		racket2.keyReleased(e);
 		
 	}
 
