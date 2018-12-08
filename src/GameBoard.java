@@ -42,7 +42,7 @@ public class GameBoard extends JPanel implements KeyListener {//탁구대 클래스(화
 	}
 
 	@Override
-	public void keyReleased(KeyEvent e) {
+	public void keyReleased(KeyEvent e) {//키보드가 눌리면 라켓에 이벤트 전달해줌
 		racket1.keyReleased(e);
 		racket2.keyReleased(e);
 		
