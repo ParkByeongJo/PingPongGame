@@ -32,5 +32,9 @@ public class Ball {
 		g.setColor(color);
 		g.fillOval(x, y, 2 * RADIUS, 2 * RADIUS);
 	}
+	
+	public Rectangle getBounds() {
+		return new Rectangle(x, y, 2 * RADIUS, 2 * RADIUS);
+	}
 
 }

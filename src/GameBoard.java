@@ -36,8 +36,9 @@ public class GameBoard extends JPanel implements KeyListener {//탁구대 클래스(화
 	}
 	
 	@Override
-	public void keyPressed(KeyEvent arg0) {
-		// TODO Auto-generated method stub
+	public void keyPressed(KeyEvent e) {//키보드를 눌렀을 때 각 라켓들의 움직임을 호출
+		racket1.keyPressed(e);
+		racket2.keyPressed(e);
 		
 	}
 
@@ -55,8 +56,14 @@ public class GameBoard extends JPanel implements KeyListener {//탁구대 클래스(화
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		JFrame f=new JFrame("Ping-Pong GAME");//탁구 게임 창 생성
+		f.setSize(600, 400);//창 사이즈 설정
+		f.setVisible(true);
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+		GameBoard game=new GameBoard();//탁구 게임판 생성
+		f.add(game);//창에 탁구 게임판 생성시킴
+		
 	}
 
 }
