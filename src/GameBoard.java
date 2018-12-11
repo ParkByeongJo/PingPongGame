@@ -64,6 +64,16 @@ public class GameBoard extends JPanel implements KeyListener {//탁구대 클래스(화
 		GameBoard game=new GameBoard();//탁구 게임판 생성
 		f.add(game);//창에 탁구 게임판 생성시킴
 		
+		while(true) {//루프문을 이용하여 공과 라켓을 이동시키고 탁구대 화면을 다시 그려준다.
+			game.move();
+			game.repaint();
+			try {
+				Thread.sleep(10);
+			}catch(InterruptedException e) {//오류 처리
+				e.printStackTrace();
+			}
+		}
+		
 	}
 
 }

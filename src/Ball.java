@@ -36,5 +36,10 @@ public class Ball {
 	public Rectangle getBounds() {
 		return new Rectangle(x, y, 2 * RADIUS, 2 * RADIUS);
 	}
+	
+	private boolean collision() {//공들끼리 충돌하였는지 확인해주는 메소드
+		return game.racket1.getBounds().intersects(getBounds())
+				|| game.racket2.getBounds().intersects(getBounds());
+	}
 
 }
