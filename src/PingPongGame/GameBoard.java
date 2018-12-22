@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.*;
 import javax.swing.*;
+@SuppressWarnings("serial")
 
 public class GameBoard extends JPanel implements MouseMotionListener {//탁구대 클래스(화면 창이므로 JPanel클래스를 상속받고 KeyListener인터페이스를 구현함)
 	
