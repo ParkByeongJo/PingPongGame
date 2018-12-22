@@ -19,7 +19,7 @@ public class GameBoard extends JPanel implements MouseMotionListener {//탁구대 �
 		racket1=new Racket(this, 10, 150, Color.blue);//(10, 150)의 위치에 파란색 라켓1을 생성
 		racket2=new Racket(this, 560, 150, Color.yellow);//(560, 150)의 위치에 노란색 라켓1을 생성
 		this.setFocusable(true);
-		this.addMouseMotionListener(this);
+		this.addMouseMotionListener(this);//MouseMotionListener기능 추가
 	}
 
 	private void move() {//공과 라켓을 이동시켜주는 메소드
@@ -66,7 +66,6 @@ public class GameBoard extends JPanel implements MouseMotionListener {//탁구대 �
 
 		GameBoard game=new GameBoard();//탁구 게임판 생성
 		f.add(game);//창에 탁구 게임판 생성시킴
-		
 		game.judgment();//누가 20점을 넘겼는지 메시지로 알려준다.
 		
 		while(true) {//루프문을 이용하여 공과 라켓을 이동시키고 탁구대 화면을 다시 그려준다.

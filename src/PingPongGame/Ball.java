@@ -54,5 +54,4 @@ public class Ball {
 		return game.racket1.getBounds().intersects(getBounds())
 				|| game.racket2.getBounds().intersects(getBounds());
 	}
-
 }

@@ -33,7 +33,7 @@ public class Racket {
 				y_speed=-2;//라켓 속도
 			}
 		}
-		y+=y_speed;
+		y+=y_speed;//y축으로 이동
 	}
 	
 	public void draw(Graphics2D g) {//라켓을 그려주는 메소드
