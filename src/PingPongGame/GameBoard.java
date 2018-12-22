@@ -67,7 +67,6 @@ public class GameBoard extends JPanel implements MouseMotionListener {//탁구대 �
 
 		GameBoard game=new GameBoard();//탁구 게임판 생성
 		f.add(game);//창에 탁구 게임판 생성시킴
-		game.judgment();//누가 20점을 넘겼는지 메시지로 알려준다.
 		
 		while(true) {//루프문을 이용하여 공과 라켓을 이동시키고 탁구대 화면을 다시 그려준다.
 			game.move();
@@ -77,6 +76,7 @@ public class GameBoard extends JPanel implements MouseMotionListener {//탁구대 �
 			}catch(InterruptedException e) {//오류 처리
 				e.printStackTrace();
 			}
+			game.judgment();//누가 20점을 넘겼는지 메시지로 알려준다.
 		}
 	}
 }
